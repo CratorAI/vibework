@@ -50,14 +50,37 @@ by the repository. `bash scripts/release-macos.sh` builds but does not publish.
 
 ## When someone else holds the Developer ID
 
-If another person signs on the project's behalf, they do not need the source.
-Build an unsigned app here (`bash scripts/install-app.sh --build-only`), then
-send them a folder with `Vibework.app`, `src-tauri/Entitlements.plist` and
-`scripts/sign-kit/sign.sh`. They run `sign.sh` with their own identity and
-notarization profile (instructions are at the top of the script) and send
-back the signed DMG and the zipped, stapled app. Their certificate and
-password never leave their Mac. Make the updater bundle from the returned app
-with `bunx tauri signer sign`, then publish.
+They can either build from source or sign a build you send them. Their
+certificate and passwords never leave their Mac in both cases, and they do not
+need the updater key.
+
+**Build from source (simplest for a developer).** On an Apple silicon Mac with
+Xcode Command Line Tools, Rust, Bun and Node.js, and a "Developer ID
+Application" certificate in Keychain Access:
+
+```sh
+git clone https://github.com/CratorAI/vibework.git && cd vibework
+bun install --frozen-lockfile
+security find-identity -v -p codesigning   # copy the Developer ID Application name
+APPLE_SIGNING_IDENTITY="Developer ID Application: Name (TEAMID)" \
+APPLE_TEAM_ID=TEAMID APPLE_ID=you@example.com \
+APPLE_PASSWORD=app-specific-password \
+bash scripts/release-macos.sh
+```
+
+The app-specific password comes from account.apple.com > Sign-In and Security.
+The script builds, signs, notarizes and staples the app and the DMG (about 15
+to 25 minutes, mostly compiling and waiting for Apple), then prints the two
+files to send back: the DMG and `Vibework.app.zip`.
+
+**Sign a build you send them.** Build an unsigned app here
+(`bash scripts/install-app.sh --build-only`), then send a folder with
+`Vibework.app`, `src-tauri/Entitlements.plist` and `scripts/sign-kit/sign.sh`.
+They run `sign.sh` (instructions are at the top of the script) and send back
+the same two files.
+
+Either way, the owner then makes the updater bundle from the returned app with
+`bunx tauri signer sign` and publishes the release.
 
 ## Each version
 
