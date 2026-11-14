@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Vibework",
+  "version": "../package.json",
+  "identifier": "com.vibeworkapp.vibework",
+  "build": {
+    "beforeDevCommand": "bun run prepare:opencode && bun run prepare:skills && bun run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run prepare:opencode && bun run prepare:skills && bun run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "macOSPrivateApi": true,
+    "security": {
+      "csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: artifact: http://artifact.localhost https:; font-src 'self' data:; media-src 'self' data: blob: artifact: http://artifact.localhost; connect-src 'self' ipc: http://ipc.localhost artifact: http://artifact.localhost; frame-src artifact: http://artifact.localhost; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'",
+      "devCsp": "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval' http://localhost:1420; style-src 'self' 'unsafe-inline' http://localhost:1420; img-src 'self' data: blob: artifact: http://artifact.localhost https:; font-src 'self' data: http://localhost:1420; media-src 'self' data: blob: artifact: http://artifact.localhost; connect-src 'self' ipc: http://ipc.localhost artifact: http://artifact.localhost http://localhost:1420 ws://localhost:1420 ws://localhost:1421; frame-src artifact: http://artifact.localhost; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'",
+      "dangerousDisableAssetCspModification": [
+        "style-src"
+      ]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "app",
+      "dmg"
+    ],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": {
+      "bundle-resources/.vibework/": ".vibework/",
+      "resources/agents/LICENSE-claude-sdk.md": "licenses/claude-agent-sdk/LICENSE.md",
+      "resources/agents/README-claude-sdk.md": "licenses/claude-agent-sdk/README.md",
+      "../licenses/": "licenses/third-party/",
+      "../THIRD-PARTY-NOTICES.md": "licenses/THIRD-PARTY-NOTICES.md",
+      "../src/lib/iconoir-LICENSE": "licenses/iconoir.txt",
+      "../src/components/artifacts/sheet/vendor/ironcalc-workbook/LICENSE-MIT": "licenses/ironcalc-MIT.txt",
+      "../src/components/artifacts/sheet/vendor/ironcalc-workbook/LICENSE-Apache-2.0": "licenses/ironcalc-Apache.txt",
+      "../src/components/artifacts/sheet/vendor/ironcalc-workbook/THIRD-PARTY-NOTICES.md": "licenses/ironcalc-notices.md"
+    },
+    "externalBin": [
+      "binaries/opencode"
+    ],
+    "macOS": {
+      "signingIdentity": "-",
+      "hardenedRuntime": true,
+      "entitlements": "./Entitlements.plist"
+    }
+  },
+  "plugins": {
+    "deep-link": {
+      "desktop": {
+        "schemes": [
+          "vibework"
+        ]
+      }
+    },
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEI4MjQyRDhCREREM0U1MEUKUldRTzVkUGRpeTBrdUpiT0huYmN3bEhSMnJXYVB0QWJyeDVlZU4yT05UUTl2dFFsbm03anZMMHUK",
+      "endpoints": [
+        "https://github.com/CratorAI/vibework/releases/latest/download/latest.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/*
+ * Workspace panel styles that utilities cannot express. Colours come from the
+ * tokens in src/index.css only.
+ */
+
+/* Syntax highlighting (shiki css-variables theme) mapped onto the app tokens */
+.code-view {
+  --shiki-foreground: var(--foreground);
+  --shiki-background: transparent;
+  --shiki-token-comment: var(--muted-foreground);
+  --shiki-token-keyword: var(--file-code);
+  --shiki-token-string: var(--success);
+  --shiki-token-string-expression: var(--success);
+  --shiki-token-constant: var(--file-pdf);
+  --shiki-token-function: var(--info);
+  --shiki-token-parameter: var(--foreground);
+  --shiki-token-punctuation: var(--muted-foreground);
+  --shiki-token-link: var(--info);
+  --shiki-token-inserted: var(--success);
+  --shiki-token-deleted: var(--destructive);
+  --shiki-token-changed: var(--warning);
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* xterm: let it fill the host; its own scrollbar uses the theme colours */
+.terminal-host .xterm {
+  height: 100%;
+}
+.terminal-host .xterm-viewport {
+  background-color: transparent !important;
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Leadership team",
+  "direction": "down",
+  "nodes": [
+    { "id": "ceo", "label": "Priya Shah\nCEO", "color": "purple" },
+    { "id": "cto", "label": "Tom Reid\nCTO", "color": "blue" },
+    { "id": "cfo", "label": "Ana Lopez\nCFO", "color": "green" },
+    { "id": "coo", "label": "Sam Okafor\nCOO", "color": "orange" },
+    { "id": "eng", "label": "Engineering\n24 people" },
+    { "id": "data", "label": "Data\n6 people" },
+    { "id": "finance", "label": "Finance\n5 people" },
+    { "id": "ops", "label": "Operations\n12 people" },
+    { "id": "support", "label": "Support\n9 people" }
+  ],
+  "edges": [
+    "ceo -- cto", "ceo -- cfo", "ceo -- coo",
+    "cto -- eng", "cto -- data",
+    "cfo -- finance",
+    "coo -- ops", "coo -- support"
+  ]
+}

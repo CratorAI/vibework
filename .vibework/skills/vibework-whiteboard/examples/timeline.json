@@ -1,0 +1,17 @@
+{
+  "title": "2026 product roadmap",
+  "direction": "right",
+  "nodes": [
+    { "id": "q1", "label": "Q1\nPrivate beta", "kind": "rounded", "color": "blue" },
+    { "id": "q2", "label": "Q2\nPublic launch", "kind": "rounded", "color": "blue" },
+    { "id": "q3", "label": "Q3\nTeams and billing", "kind": "rounded", "color": "blue" },
+    { "id": "q4", "label": "Q4\nEnterprise", "kind": "rounded", "color": "blue" },
+    { "id": "n1", "label": "50 design partners", "kind": "note" },
+    { "id": "n2", "label": "Launch on web and Mac", "kind": "note" },
+    { "id": "n3", "label": "SSO and audit log", "kind": "note" }
+  ],
+  "edges": [
+    "q1 -> q2", "q2 -> q3", "q3 -> q4",
+    "q1 -- n1", "q2 -- n2", "q4 -- n3"
+  ]
+}

@@ -1,0 +1,17 @@
+title = "Vibework secret scan"
+[extend]
+useDefault = true
+[[rules]]
+id = "generic-api-key"
+  [[rules.allowlists]]
+  description = "Recorded API message identifiers, not authentication credentials"
+  condition = "AND"
+  paths = ['''scripts/external/claude(-resume)?-recorded\.json$''']
+  regexTarget = "line"
+  regexes = ['''^\s*"api_message_id": "msg_[A-Za-z0-9]+",?\s*$''']
+  [[rules.allowlists]]
+  description = "Literal synthetic credential in the redaction test"
+  condition = "AND"
+  paths = ['''src-tauri/src/engine/sidecar\.rs$''']
+  regexTarget = "line"
+  regexes = ['''assert_eq!\(redact\("key=sk-or-v1-abcdef123456 ok", &\["sk-or-v1-abcdef123456"\]\), "key=\[redacted\] ok"\);''']

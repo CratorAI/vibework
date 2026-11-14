@@ -1,0 +1,968 @@
+[
+{
+"id": "evt_1d08c1e49001zRI1C7a7vZk2DA",
+"created": 1794500206153,
+"type": "session.created",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"slug": "neon-eagle",
+"version": "2.2.7",
+"projectID": "a02c204a2eec7d722977c3fff3a02469a75fa476",
+"location": {
+"directory": "/work"
+},
+"subpath": "../../../../../work",
+"agent": "vibework",
+"metadata": {
+"vibework": {
+"engine": "opencode",
+"appSessionId": "x"
+}
+},
+"model": {
+"id": "deepseek/deepseek-v4.1-flash",
+"providerID": "openrouter"
+}
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 0,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c208f004MD1ZnRIW0h65T5",
+"created": 1794500206735,
+"type": "session.inbox.enqueued",
+"location": {
+"directory": "/work"
+},
+"data": {
+"inboxID": "msg_1d08c1fc7001WAwYGf6oJPF6yX",
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"item": {
+"type": "user",
+"payload": {
+"text": "First write one line listing the exact names of every tool you can call. Then create hello.txt containing hi. Then run: ls -la (one shell call). Then reply done."
+},
+"delivery": "steer"
+}
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 1,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2091001X8jHkI1jmEmnBM",
+"created": 1794500206737,
+"type": "session.execution.started",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 2,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2095001aYDFkdU6pEnKWp",
+"created": 1794500206741,
+"metadata": {
+"instructions": {
+"initial": true
+}
+},
+"type": "session.instructions.updated",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"delta": {
+"core/codemode": "b9321aa27fe3f9eb6662ad886008492dd401333a0049c044c54ac2323b9ead1e",
+"core/date": "a7e13a150687c80c4d0443d32fcf7d9efe5c87e5523d17f39302e1f532dde9d8",
+"core/environment": "f6629743ef853677b3bd1006e23c68c7631ace814fe2466f0bc9a95e41dabecf"
+}
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 3,
+"version": 2
+}
+},
+{
+"id": "evt_1d08c2095002tNcAgg3iDEonG0",
+"created": 1794500206741,
+"type": "session.inbox.delivered",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"inboxID": "msg_1d08c1fc7001WAwYGf6oJPF6yX"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 4,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2581001HGiNR1M1iBa4HJ",
+"created": 1794500208001,
+"type": "session.step.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"agent": "vibework",
+"model": {
+"id": "deepseek/deepseek-v4.1-flash",
+"providerID": "openrouter",
+"variant": "default"
+},
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"started": 1794500206750
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 5,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2586001loBsgEfN1cmonB",
+"created": 1794500208006,
+"type": "session.reasoning.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"native": {
+"reasoningField": "reasoning"
+}
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 6,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c25f0001gEbEKWKrMv9EK1",
+"created": 1794500208112,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": "The user wants: first write one line listing exact names of every tool I"
+}
+},
+{
+"id": "evt_1d08c268b001Agoi7MHvyPd8OB",
+"created": 1794500208267,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": " can call. Then create hello.txt, run ls -la, reply done.\n\nTools I have: edit, experimental_image_generate,"
+}
+},
+{
+"id": "evt_1d08c2705001jcME9ulINpFB8U",
+"created": 1794500208389,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": " glob, grep, question, read, shell, skill, subagent,"
+}
+},
+{
+"id": "evt_1d08c2779001nIZf5Db8HTYKax",
+"created": 1794500208505,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": " webfetch, websearch, write, execute. Code mode tools"
+}
+},
+{
+"id": "evt_1d08c27fd001fvbp9TMC5bBBqM",
+"created": 1794500208637,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": ": opencode.session_move, opencode.worktree_create, worktree_list, worktree_remove, list_mcp_resources"
+}
+},
+{
+"id": "evt_1d08c2804001rVxtWB3VDi7mZ7",
+"created": 1794500208644,
+"type": "session.usage.updated",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"cost": 5.22e-05,
+"tokens": {
+"input": 472,
+"output": 10,
+"reasoning": 0,
+"cache": {
+"read": 0,
+"write": 0
+}
+}
+}
+},
+{
+"id": "evt_1d08c2806001jy846l07ArVkpA",
+"created": 1794500208646,
+"type": "session.renamed",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"title": "Create hello.txt and list files"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 8,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2870001kQS7YF9eJJkA5C",
+"created": 1794500208752,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": ", models, read_mcp_resource, session_rename.\n\nI'll write tools line, then create file, then shell,"
+}
+},
+{
+"id": "evt_1d08c292c0018gjYZVqFGR7mEZ",
+"created": 1794500208940,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": " then done.\n\nLet me do write and shell - shell depends on file creation, so sequential. Actually I can do write then shell.\n\nLet's write the tools"
+}
+},
+{
+"id": "evt_1d08c29df001cCd4cz00LsuZ28",
+"created": 1794500209119,
+"type": "session.reasoning.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": " line first in text, then tool calls."
+}
+},
+{
+"id": "evt_1d08c29e0001A5R9UYl0okGVni",
+"created": 1794500209120,
+"type": "session.text.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 9,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2a51001y1BvUMtdS4WjSY",
+"created": 1794500209233,
+"type": "session.text.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": "Tools: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute; code-mode"
+}
+},
+{
+"id": "evt_1d08c2ac4001oAMMPQ1qVDshE4",
+"created": 1794500209348,
+"type": "session.text.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": ": tools.opencode.session_move, tools.opencode.worktree_create, tools.opencode.worktree_list, tools.opencode.worktree"
+}
+},
+{
+"id": "evt_1d08c2b84001C4O6HtJV4n1dtm",
+"created": 1794500209540,
+"type": "session.text.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": "_remove, tools.opencode.list_mcp_resources, tools.opencode.models"
+}
+},
+{
+"id": "evt_1d08c2bf6001waCaaBDK2vHyHO",
+"created": 1794500209654,
+"type": "session.text.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"delta": ", tools.opencode.read_mcp_resource, tools.opencode.session_rename"
+}
+},
+{
+"id": "evt_1d08c2c420017sG3nZ4cfjyzqB",
+"created": 1794500209730,
+"type": "session.tool.input.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"id": "call_1b356a4ed4e44fe586201977",
+"name": "write"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 10,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c64001EN3FQXex5osiCI",
+"created": 1794500209764,
+"type": "session.reasoning.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"text": "The user wants: first write one line listing exact names of every tool I can call. Then create hello.txt, run ls -la, reply done.\n\nTools I have: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute. Code mode tools: opencode.session_move, opencode.worktree_create, worktree_list, worktree_remove, list_mcp_resources, models, read_mcp_resource, session_rename.\n\nI'll write tools line, then create file, then shell, then done.\n\nLet me do write and shell - shell depends on file creation, so sequential. Actually I can do write then shell.\n\nLet's write the tools line first in text, then tool calls.",
+"native": {
+"reasoningField": "reasoning",
+"reasoningDetails": [
+{
+"type": "reasoning.text",
+"text": "The user wants: first write one line listing exact names of every tool I can call. Then create hello.txt, run ls -la, reply done.\n\nTools I have: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute. Code mode tools: opencode.session_move, opencode.worktree_create, worktree_list, worktree_remove, list_mcp_resources, models, read_mcp_resource, session_rename.\n\nI'll write tools line, then create file, then shell, then done.\n\nLet me do write and shell - shell depends on file creation, so sequential. Actually I can do write then shell.\n\nLet's write the tools line first in text, then tool calls.",
+"format": "unknown",
+"index": 0
+}
+]
+}
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 11,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c6c001D0Otauxs4Yezu5",
+"created": 1794500209772,
+"type": "session.tool.input.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"id": "call_1b356a4ed4e44fe586201977",
+"text": "{\"path\": \"hello.txt\", \"content\": \"hi\"}"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 12,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c73001hgnDVk5ID347Br",
+"created": 1794500209779,
+"type": "session.tool.called",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"id": "call_1b356a4ed4e44fe586201977",
+"input": {
+"path": "hello.txt",
+"content": "hi"
+},
+"executed": false
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 13,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c77001BZP7lg2IMQfvvZ",
+"created": 1794500209783,
+"type": "session.text.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"ordinal": 0,
+"text": "Tools: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute; code-mode: tools.opencode.session_move, tools.opencode.worktree_create, tools.opencode.worktree_list, tools.opencode.worktree_remove, tools.opencode.list_mcp_resources, tools.opencode.models, tools.opencode.read_mcp_resource, tools.opencode.session_rename"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 14,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c79001YBzVgHBMWA7XMe",
+"created": 1794500209785,
+"type": "session.step.streamed",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 15,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c820013Q2kR4qmmp8pXJ",
+"created": 1794500209794,
+"type": "session.tool.success",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"id": "call_1b356a4ed4e44fe586201977",
+"content": [
+{
+"type": "text",
+"text": "Created file successfully: hello.txt"
+}
+],
+"metadata": {
+"truncated": false
+},
+"executed": false
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 16,
+"version": 2
+}
+},
+{
+"id": "evt_1d08c2c85001bqQSXb7p9624k5",
+"created": 1794500209798,
+"type": "session.step.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c209c0019lJxGFDstIx02r",
+"finish": "tool-calls",
+"rawFinish": "tool_calls",
+"tokens": {
+"input": 4021,
+"output": 153,
+"reasoning": 164,
+"cache": {
+"read": 1280,
+"write": 0
+}
+},
+"cost": 0.000558033
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 17,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2c87001PBdJoYMaWCVFIY",
+"created": 1794500209799,
+"type": "session.usage.updated",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"cost": 0.000610233,
+"tokens": {
+"input": 4493,
+"output": 163,
+"reasoning": 164,
+"cache": {
+"read": 1280,
+"write": 0
+}
+}
+}
+},
+{
+"id": "evt_1d08c2fd0001aNvMqNPY3InOMH",
+"created": 1794500210640,
+"type": "session.step.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"agent": "vibework",
+"model": {
+"id": "deepseek/deepseek-v4.1-flash",
+"providerID": "openrouter",
+"variant": "default"
+},
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"started": 1794500209809
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 18,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c2fd2001kmOEE27hgOUtF4",
+"created": 1794500210642,
+"type": "session.tool.input.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a",
+"name": "shell"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 19,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c3019001pc6TnYdSk0tIJS",
+"created": 1794500210713,
+"type": "session.tool.input.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a",
+"text": "{\"command\": \"ls -la\"}"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 20,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c301b0012Rji28mgC6DkSt",
+"created": 1794500210715,
+"type": "session.tool.called",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a",
+"input": {
+"command": "ls -la"
+},
+"executed": false
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 21,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c301c0010PyVzz9I70zJ7N",
+"created": 1794500210716,
+"type": "session.step.streamed",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 22,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c3020002ys3BMCrkBgYTpB",
+"created": 1794500210720,
+"type": "permission.asked",
+"location": {
+"directory": "/work"
+},
+"data": {
+"id": "per_1d08c3020001wR7miiFPbFWRxS",
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"action": "shell",
+"resources": [
+"ls -la"
+],
+"save": [
+"ls *"
+],
+"source": {
+"type": "tool",
+"messageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a"
+}
+},
+"_handled": true
+},
+{
+"id": "evt_1d08c312f001b22PzpbTOCavu1",
+"created": 1794500210991,
+"type": "permission.replied",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"requestID": "per_1d08c3020001wR7miiFPbFWRxS",
+"reply": "once"
+}
+},
+{
+"id": "evt_1d08c3133002ykjFnD5yVlSTi6",
+"created": 1794500210995,
+"type": "session.tool.progress",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a",
+"metadata": {
+"shellID": "sh_1d08c312f002Rsryp2ccPFMxvN"
+}
+}
+},
+{
+"id": "evt_1d08c3143001QtrzFV6R3Dwuea",
+"created": 1794500211011,
+"type": "session.tool.success",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"id": "call_acb2544a6bee4bad9498cd5a",
+"content": [
+{
+"type": "text",
+"text": "total 8\ndrwxr-xr-x@ 3 user  wheel   96 Nov 12 21:46 .\ndrwxr-xr-x@ 5 user  wheel  160 Nov 12 21:46 ..\n-rw-r--r--@ 1 user  wheel    2 Nov 12 21:46 hello.txt\n"
+}
+],
+"metadata": {
+"status": "completed",
+"truncated": false,
+"exit": 0
+},
+"executed": false
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 23,
+"version": 2
+}
+},
+{
+"id": "evt_1d08c31450018qoOEQenB0kN1v",
+"created": 1794500211013,
+"type": "session.step.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+"finish": "tool-calls",
+"rawFinish": "tool_calls",
+"tokens": {
+"input": 514,
+"output": 40,
+"reasoning": 0,
+"cache": {
+"read": 5120,
+"write": 0
+}
+},
+"cost": 8.1522e-05
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 24,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c31460014YwaEFu1HdDlON",
+"created": 1794500211014,
+"type": "session.usage.updated",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"cost": 0.000691755,
+"tokens": {
+"input": 5007,
+"output": 203,
+"reasoning": 164,
+"cache": {
+"read": 6400,
+"write": 0
+}
+}
+}
+},
+{
+"id": "evt_1d08c336e0018IhNtss7BJSK2I",
+"created": 1794500211566,
+"type": "session.step.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"agent": "vibework",
+"model": {
+"id": "deepseek/deepseek-v4.1-flash",
+"providerID": "openrouter",
+"variant": "default"
+},
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH",
+"started": 1794500211020
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 25,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c3372001quf9R7GZzduRMK",
+"created": 1794500211570,
+"type": "session.text.started",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH",
+"ordinal": 0
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 26,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c3376001AbDpKGUszYPSmu",
+"created": 1794500211574,
+"type": "session.text.delta",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH",
+"ordinal": 0,
+"delta": "done"
+}
+},
+{
+"id": "evt_1d08c3376002OVJlxX0ypZ1bkB",
+"created": 1794500211574,
+"type": "session.text.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH",
+"ordinal": 0,
+"text": "done"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 27,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c3379001HXVPh8j4OFLb6B",
+"created": 1794500211577,
+"type": "session.step.streamed",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 28,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c337b001RZa4HZmyFFHZ1U",
+"created": 1794500211579,
+"type": "session.step.ended",
+"location": {
+"directory": "/work"
+},
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"assistantMessageID": "msg_1d08c314a001qDuOgxXV603auH",
+"finish": "stop",
+"rawFinish": "stop",
+"tokens": {
+"input": 137,
+"output": 3,
+"reasoning": 0,
+"cache": {
+"read": 5632,
+"write": 0
+}
+},
+"cost": 2.74722e-05
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 29,
+"version": 1
+}
+},
+{
+"id": "evt_1d08c337d001H7mm4SKF011lWd",
+"created": 1794500211581,
+"type": "session.usage.updated",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"cost": 0.0007192272,
+"tokens": {
+"input": 5144,
+"output": 206,
+"reasoning": 164,
+"cache": {
+"read": 12032,
+"write": 0
+}
+}
+}
+},
+{
+"id": "evt_1d08c337e001y32qVU0rpSInL0",
+"created": 1794500211582,
+"type": "session.execution.succeeded",
+"data": {
+"sessionID": "ses_3e1078e73bff44018f3c9c6b2482bae2"
+},
+"durable": {
+"aggregateID": "ses_3e1078e73bff44018f3c9c6b2482bae2",
+"seq": 30,
+"version": 1
+}
+}
+]

@@ -1,0 +1,27 @@
+{
+  "title": "Checkout flow",
+  "direction": "down",
+  "nodes": [
+    { "id": "cart", "label": "Customer opens cart", "kind": "start", "color": "blue" },
+    { "id": "signed-in", "label": "Signed in?", "kind": "decision" },
+    { "id": "login", "label": "Sign in or continue as guest" },
+    { "id": "address", "label": "Enter delivery address" },
+    { "id": "pay", "label": "Take payment" },
+    { "id": "paid", "label": "Payment approved?", "kind": "decision" },
+    { "id": "retry", "label": "Show error, offer another card", "color": "red" },
+    { "id": "confirm", "label": "Send confirmation email" },
+    { "id": "done", "label": "Order placed", "kind": "end", "color": "green" }
+  ],
+  "edges": [
+    "cart -> signed-in",
+    "signed-in -> address: yes",
+    "signed-in -> login: no",
+    "login -> address",
+    "address -> pay",
+    "pay -> paid",
+    "paid -> confirm: yes",
+    "paid -> retry: no",
+    "retry --> pay: try again",
+    "confirm -> done"
+  ]
+}

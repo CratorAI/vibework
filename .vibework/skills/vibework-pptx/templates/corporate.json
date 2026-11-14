@@ -1,0 +1,11 @@
+{
+  "name": "corporate",
+  "titleFont": "Arial",
+  "bodyFont": "Arial",
+  "titleSize": 32,
+  "bodySize": 16,
+  "titleColor": "1a365d",
+  "bodyColor": "2d3748",
+  "backgroundColor": "FFFFFF",
+  "accentColor": "2b6cb0"
+}

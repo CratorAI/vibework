@@ -1,0 +1,364 @@
+[
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "userMessage",
+        "id": "01a1d474-3bfb-7d63-ba3d-ee4801cc3be9",
+        "clientId": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Write exactly hello followed by a newline to hello.txt in the current folder using your file editing tool. Reply with one short sentence. Do not use other tools or inspect any other files.",
+            "text_elements": []
+          }
+        ],
+        "startedAtMs": 1794565749755,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "startedAtMs": 1794565749755
+    },
+    "emittedAtMs": 1794565749756
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "userMessage",
+        "id": "01a1d474-3bfb-7d63-ba3d-ee4801cc3be9",
+        "clientId": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Write exactly hello followed by a newline to hello.txt in the current folder using your file editing tool. Reply with one short sentence. Do not use other tools or inspect any other files.",
+            "text_elements": []
+          }
+        ],
+        "startedAtMs": 1794565749755,
+        "completedAtMs": 1794565749755
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "completedAtMs": 1794565749755
+    },
+    "emittedAtMs": 1794565749760
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "reasoning",
+        "id": "rs_08f32fdb846f9cb2016af6e679bd5887d0975719d467c3759b",
+        "summary": [],
+        "content": [],
+        "startedAtMs": 1794565753790,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "startedAtMs": 1794565753790
+    },
+    "emittedAtMs": 1794565753790
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "reasoning",
+        "id": "rs_08f32fdb846f9cb2016af6e679bd5887d0975719d467c3759b",
+        "summary": [],
+        "content": [],
+        "startedAtMs": 1794565753790,
+        "completedAtMs": 1794565753790
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "completedAtMs": 1794565753790
+    },
+    "emittedAtMs": 1794565753794
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "fileChange",
+        "id": "exec-6ee91d67-069b-4f05-b158-c2b716198cd8",
+        "changes": [
+          {
+            "path": "/tmp/vibework-agents/codex-task/hello.txt",
+            "kind": {
+              "type": "add"
+            },
+            "diff": "hello\n"
+          }
+        ],
+        "status": "inProgress",
+        "startedAtMs": 1794565754593,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "startedAtMs": 1794565754593
+    },
+    "emittedAtMs": 1794565754594
+  },
+  {
+    "method": "item/fileChange/requestApproval",
+    "id": 0,
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "exec-6ee91d67-069b-4f05-b158-c2b716198cd8",
+      "startedAtMs": 1794565754597,
+      "reason": null,
+      "grantRoot": null
+    }
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "fileChange",
+        "id": "exec-6ee91d67-069b-4f05-b158-c2b716198cd8",
+        "changes": [
+          {
+            "path": "/tmp/vibework-agents/codex-task/hello.txt",
+            "kind": {
+              "type": "add"
+            },
+            "diff": "hello\n"
+          }
+        ],
+        "status": "completed",
+        "startedAtMs": 1794565754593,
+        "completedAtMs": 1794565754630
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "completedAtMs": 1794565754630
+    },
+    "emittedAtMs": 1794565754632
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+        "text": "",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794565758029,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "startedAtMs": 1794565758029
+    },
+    "emittedAtMs": 1794565758029
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "W"
+    },
+    "emittedAtMs": 1794565758029
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "rote"
+    },
+    "emittedAtMs": 1794565758029
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " exactly"
+    },
+    "emittedAtMs": 1794565758029
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " `"
+    },
+    "emittedAtMs": 1794565758247
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "hello"
+    },
+    "emittedAtMs": 1794565758247
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "`"
+    },
+    "emittedAtMs": 1794565758248
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " followed"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " by"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " a"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " newline"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " to"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": " `"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "hello"
+    },
+    "emittedAtMs": 1794565758284
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": ".txt"
+    },
+    "emittedAtMs": 1794565758285
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "itemId": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+      "delta": "`."
+    },
+    "emittedAtMs": 1794565758285
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+        "text": "Wrote exactly `hello` followed by a newline to `hello.txt`.",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794565758029,
+        "completedAtMs": 1794565758357
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+      "completedAtMs": 1794565758357
+    },
+    "emittedAtMs": 1794565758365
+  },
+  {
+    "method": "turn/completed",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turn": {
+        "id": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+        "rootTurnId": "01a1d474-2b16-7360-95ac-f56f54c80c11",
+        "items": [
+          {
+            "type": "agentMessage",
+            "id": "msg_08f32fdb846f9cb2016af6e67dfad487d0914a0c26ad70cd19",
+            "text": "Wrote exactly `hello` followed by a newline to `hello.txt`.",
+            "phase": "final_answer",
+            "memoryCitation": null,
+            "delivery": null,
+            "questions": null,
+            "startedAtMs": 1794565758029,
+            "completedAtMs": 1794565758357
+          }
+        ],
+        "itemsView": "summary",
+        "status": "completed",
+        "error": null,
+        "startedAt": 1794565745,
+        "completedAt": 1794565758,
+        "durationMs": 12999
+      }
+    },
+    "emittedAtMs": 1794565758453
+  }
+]

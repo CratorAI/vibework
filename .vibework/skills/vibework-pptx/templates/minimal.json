@@ -1,0 +1,11 @@
+{
+  "name": "minimal",
+  "titleFont": "Arial",
+  "bodyFont": "Calibri",
+  "titleSize": 36,
+  "bodySize": 18,
+  "titleColor": "000000",
+  "bodyColor": "333333",
+  "backgroundColor": "FFFFFF",
+  "accentColor": "0066CC"
+}

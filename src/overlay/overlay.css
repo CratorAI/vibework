@@ -1,0 +1,15 @@
+/* Shared tokens, Tailwind and the bundled fonts (Mona Sans / Geist Mono);
+   no network font imports so the overlay works offline. */
+@import "../index.css";
+
+/* The overlay is a transparent always-on-top window: only the card paints. */
+html,
+body,
+#overlay-root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: transparent !important;
+  overflow: hidden;
+}

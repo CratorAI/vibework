@@ -1,0 +1,60 @@
+[
+  {
+    "name": "granola",
+    "label": "Granola",
+    "url": "https://mcp.granola.ai/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://docs.granola.ai/help-center/sharing/integrations/mcp"
+  },
+  {
+    "name": "notion",
+    "label": "Notion",
+    "url": "https://mcp.notion.com/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://developers.notion.com/docs/get-started-with-mcp"
+  },
+  {
+    "name": "linear",
+    "label": "Linear",
+    "url": "https://mcp.linear.app/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://linear.app/docs/mcp"
+  },
+  {
+    "name": "sentry",
+    "label": "Sentry",
+    "url": "https://mcp.sentry.dev/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://mcp.sentry.dev/ (docs.sentry.io/product/sentry-mcp/ redirects there)"
+  },
+  {
+    "name": "atlassian",
+    "label": "Atlassian",
+    "url": "https://mcp.atlassian.com/v2/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://support.atlassian.com/atlassian-rovo-mcp-server/docs/getting-started-with-the-atlassian-remote-mcp-server/"
+  },
+  {
+    "name": "stripe",
+    "label": "Stripe",
+    "url": "https://mcp.stripe.com",
+    "auth": { "kind": "browser" },
+    "source": "https://docs.stripe.com/mcp"
+  },
+  {
+    "name": "intercom",
+    "label": "Intercom",
+    "url": "https://mcp.intercom.com/mcp",
+    "auth": { "kind": "browser" },
+    "source": "https://developers.intercom.com/docs/guides/mcp",
+    "note": "US-hosted workspaces; EU workspaces use https://mcp.eu.intercom.com/mcp"
+  },
+  {
+    "name": "github",
+    "label": "GitHub",
+    "url": "https://api.githubcopilot.com/mcp/",
+    "auth": { "kind": "key", "header": "Authorization", "placeholder": "Bearer <personal access token>" },
+    "source": "https://github.com/github/github-mcp-server (README and docs/remote-server.md)",
+    "note": "GitHub's OAuth needs an app each client registers in advance; any client can use a personal access token."
+  }
+]

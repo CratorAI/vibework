@@ -1,0 +1,31 @@
+{
+  "title": "Order platform",
+  "direction": "right",
+  "groups": [
+    { "id": "clients", "label": "Clients" },
+    { "id": "backend", "label": "Backend" },
+    { "id": "data", "label": "Data" }
+  ],
+  "nodes": [
+    { "id": "web", "label": "Web app", "group": "clients", "color": "blue" },
+    { "id": "mobile", "label": "Mobile app", "group": "clients", "color": "blue" },
+    { "id": "gateway", "label": "API gateway", "group": "backend" },
+    { "id": "orders", "label": "Orders service", "group": "backend", "color": "purple" },
+    { "id": "payments", "label": "Payments service", "group": "backend", "color": "purple" },
+    { "id": "queue", "label": "Event queue", "group": "backend", "kind": "rounded" },
+    { "id": "db", "label": "Postgres", "group": "data", "color": "green" },
+    { "id": "cache", "label": "Redis cache", "group": "data", "color": "green" },
+    { "id": "stripe", "label": "Stripe", "kind": "ellipse", "color": "gray" }
+  ],
+  "edges": [
+    "web -> gateway: HTTPS",
+    "mobile -> gateway: HTTPS",
+    "gateway -> orders",
+    "gateway -> payments",
+    "orders -> db",
+    "orders -> cache",
+    "orders -> queue: order.created",
+    "queue --> payments",
+    "payments -> stripe"
+  ]
+}

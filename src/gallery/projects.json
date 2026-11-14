@@ -1,0 +1,3 @@
+[
+  {"id":"motion","label":"Motion","framework":"HyperFrames","version":"0.9.41","requiredFiles":["hyperframes.json","index.html"]}
+]

@@ -1,0 +1,19 @@
+{
+  "uv": {
+    "version": "0.9.11",
+    "artifacts": {
+      "aarch64-apple-darwin": {
+        "url": "https://github.com/astral-sh/uv/releases/download/0.9.11/uv-aarch64-apple-darwin.tar.gz",
+        "sha256": "594d9f4cfbd21d5a2f34b0352bf423066a9dab1733c90b5d40e3e227506deb03",
+        "path": "uv-aarch64-apple-darwin/uv",
+        "binarySha256": "4bc0c218ad75b0965b329ad3cdac247b9f0f17cb7f76fc7ef67522ac805506ba"
+      },
+      "x86_64-apple-darwin": {
+        "url": "https://github.com/astral-sh/uv/releases/download/0.9.11/uv-x86_64-apple-darwin.tar.gz",
+        "sha256": "14236594b4edbd90929d845766a41a1d4e51d530c9ebbedfb3d93688661f142c",
+        "path": "uv-x86_64-apple-darwin/uv",
+        "binarySha256": "ba793e8aa38e7b24e8160f9840de1501d6b2c75c67875c3f836fbf2c4f8098dd"
+      }
+    }
+  }
+}

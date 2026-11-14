@@ -1,0 +1,32 @@
+{
+  "subscription_type": "team",
+  "rate_limits_available": true,
+  "rate_limits": {
+    "five_hour": {
+      "utilization": 36,
+      "resets_at": "2026-11-13T14:39:59.880425+00:00",
+      "limit_dollars": null,
+      "used_dollars": null,
+      "remaining_dollars": null,
+      "locked_reason": null
+    },
+    "seven_day": {
+      "utilization": 47,
+      "resets_at": "2026-11-16T12:59:59.880443+00:00",
+      "limit_dollars": null,
+      "used_dollars": null,
+      "remaining_dollars": null,
+      "locked_reason": null
+    },
+    "seven_day_oauth_apps": null,
+    "seven_day_opus": null,
+    "seven_day_sonnet": null,
+    "model_scoped": [
+      {
+        "display_name": "Fable",
+        "utilization": 46,
+        "resets_at": "2026-11-16T12:59:59.880670+00:00"
+      }
+    ]
+  }
+}

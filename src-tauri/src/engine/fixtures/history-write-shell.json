@@ -1,0 +1,187 @@
+[
+ {
+  "id": "msg_1d08c1fc7001WAwYGf6oJPF6yX",
+  "time": {
+   "created": 1794500206741
+  },
+  "text": "First write one line listing the exact names of every tool you can call. Then create hello.txt containing hi. Then run: ls -la (one shell call). Then reply done.",
+  "type": "user"
+ },
+ {
+  "id": "msg_1d08c209c0019lJxGFDstIx02r",
+  "time": {
+   "created": 1794500206750,
+   "streamed": 1794500209785,
+   "completed": 1794500209798
+  },
+  "type": "assistant",
+  "agent": "vibework",
+  "model": {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "providerID": "openrouter",
+   "variant": "default"
+  },
+  "content": [
+   {
+    "type": "reasoning",
+    "text": "The user wants: first write one line listing exact names of every tool I can call. Then create hello.txt, run ls -la, reply done.\n\nTools I have: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute. Code mode tools: opencode.session_move, opencode.worktree_create, worktree_list, worktree_remove, list_mcp_resources, models, read_mcp_resource, session_rename.\n\nI'll write tools line, then create file, then shell, then done.\n\nLet me do write and shell - shell depends on file creation, so sequential. Actually I can do write then shell.\n\nLet's write the tools line first in text, then tool calls.",
+    "native": {
+     "reasoningField": "reasoning",
+     "reasoningDetails": [
+      {
+       "type": "reasoning.text",
+       "text": "The user wants: first write one line listing exact names of every tool I can call. Then create hello.txt, run ls -la, reply done.\n\nTools I have: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute. Code mode tools: opencode.session_move, opencode.worktree_create, worktree_list, worktree_remove, list_mcp_resources, models, read_mcp_resource, session_rename.\n\nI'll write tools line, then create file, then shell, then done.\n\nLet me do write and shell - shell depends on file creation, so sequential. Actually I can do write then shell.\n\nLet's write the tools line first in text, then tool calls.",
+       "format": "unknown",
+       "index": 0
+      }
+     ]
+    },
+    "time": {
+     "created": 1794500208006,
+     "completed": 1794500209764
+    }
+   },
+   {
+    "type": "text",
+    "text": "Tools: edit, experimental_image_generate, glob, grep, question, read, shell, skill, subagent, webfetch, websearch, write, execute; code-mode: tools.opencode.session_move, tools.opencode.worktree_create, tools.opencode.worktree_list, tools.opencode.worktree_remove, tools.opencode.list_mcp_resources, tools.opencode.models, tools.opencode.read_mcp_resource, tools.opencode.session_rename"
+   },
+   {
+    "type": "tool",
+    "id": "call_1b356a4ed4e44fe586201977",
+    "name": "write",
+    "executed": false,
+    "state": {
+     "status": "completed",
+     "input": {
+      "path": "hello.txt",
+      "content": "hi"
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Created file successfully: hello.txt"
+      }
+     ],
+     "metadata": {
+      "truncated": false
+     }
+    },
+    "time": {
+     "created": 1794500209730,
+     "ran": 1794500209779,
+     "completed": 1794500209794
+    }
+   }
+  ],
+  "finish": "tool-calls",
+  "rawFinish": "tool_calls",
+  "cost": 0.000558033,
+  "tokens": {
+   "input": 4021,
+   "output": 153,
+   "reasoning": 164,
+   "cache": {
+    "read": 1280,
+    "write": 0
+   }
+  }
+ },
+ {
+  "id": "msg_1d08c2c8d0012Z1L2hCp8pQ7pd",
+  "time": {
+   "created": 1794500209809,
+   "streamed": 1794500210716,
+   "completed": 1794500211013
+  },
+  "type": "assistant",
+  "agent": "vibework",
+  "model": {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "providerID": "openrouter",
+   "variant": "default"
+  },
+  "content": [
+   {
+    "type": "tool",
+    "id": "call_acb2544a6bee4bad9498cd5a",
+    "name": "shell",
+    "executed": false,
+    "state": {
+     "status": "completed",
+     "input": {
+      "command": "ls -la"
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "total 8\ndrwxr-xr-x@ 3 user  wheel   96 Nov 12 21:46 .\ndrwxr-xr-x@ 5 user  wheel  160 Nov 12 21:46 ..\n-rw-r--r--@ 1 user  wheel    2 Nov 12 21:46 hello.txt\n"
+      }
+     ],
+     "metadata": {
+      "status": "completed",
+      "truncated": false,
+      "exit": 0
+     }
+    },
+    "time": {
+     "created": 1794500210642,
+     "ran": 1794500210715,
+     "completed": 1794500211011
+    }
+   }
+  ],
+  "finish": "tool-calls",
+  "rawFinish": "tool_calls",
+  "cost": 8.1522e-05,
+  "tokens": {
+   "input": 514,
+   "output": 40,
+   "reasoning": 0,
+   "cache": {
+    "read": 5120,
+    "write": 0
+   }
+  }
+ },
+ {
+  "id": "msg_1d08c314a001qDuOgxXV603auH",
+  "time": {
+   "created": 1794500211020,
+   "streamed": 1794500211577,
+   "completed": 1794500211579
+  },
+  "type": "assistant",
+  "agent": "vibework",
+  "model": {
+   "id": "deepseek/deepseek-v4.1-flash",
+   "providerID": "openrouter",
+   "variant": "default"
+  },
+  "content": [
+   {
+    "type": "text",
+    "text": "done"
+   }
+  ],
+  "finish": "stop",
+  "rawFinish": "stop",
+  "cost": 2.74722e-05,
+  "tokens": {
+   "input": 137,
+   "output": 3,
+   "reasoning": 0,
+   "cache": {
+    "read": 5632,
+    "write": 0
+   }
+  }
+ },
+ {
+  "id": "msg_1d08c337e001y32qVU0rpSInL0",
+  "time": {
+   "created": 1794500211582
+  },
+  "type": "idle",
+  "outcome": "succeeded"
+ }
+]

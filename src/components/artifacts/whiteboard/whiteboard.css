@@ -1,0 +1,75 @@
+/*
+ * Excalidraw inside the workspace panel: our surfaces, accent and type, in both themes.
+ * Excalidraw's variables live on `.excalidraw` / `.excalidraw.theme--dark`; the extra
+ * `.vw-whiteboard` ancestor makes these win in both. Dialogs (help, find) are portalled
+ * to <body> as `.excalidraw.excalidraw-modal-container`, so they are themed here too.
+ */
+
+.vw-whiteboard .excalidraw,
+.vw-whiteboard .excalidraw.theme--dark,
+body > .excalidraw.excalidraw-modal-container,
+body > .excalidraw.excalidraw-modal-container.theme--dark {
+  --ui-font: var(--font-sans);
+  --default-bg-color: var(--background);
+  --island-bg-color: var(--popover);
+  --popup-bg-color: var(--popover);
+  --sidebar-bg-color: var(--popover);
+  --input-bg-color: var(--background);
+  --input-border-color: var(--border-strong);
+  --input-hover-bg-color: var(--muted);
+  --input-label-color: var(--muted-foreground);
+  --popup-text-color: var(--popover-foreground);
+  --overlay-bg-color: color-mix(in oklab, var(--background) 70%, transparent);
+  --text-primary-color: var(--foreground);
+  --color-on-surface: var(--foreground);
+  --color-surface-lowest: var(--card);
+  --color-surface-low: var(--muted);
+  --color-surface-mid: var(--secondary);
+  --color-surface-high: var(--accent);
+  --default-border-color: var(--border);
+  --dialog-border-color: var(--border);
+  --sidebar-border-color: var(--border);
+  --button-hover-bg: var(--muted);
+  --button-active-bg: var(--accent);
+  --keybinding-color: var(--muted-foreground);
+  --link-color: var(--info);
+
+  /* Accent: our brand colour for the active tool, focus and primary buttons */
+  --color-primary: var(--brand-accent);
+  --color-primary-darker: color-mix(in oklab, var(--brand-accent) 88%, var(--foreground));
+  --color-primary-darkest: color-mix(in oklab, var(--brand-accent) 76%, var(--foreground));
+  --color-primary-hover: color-mix(in oklab, var(--brand-accent) 88%, var(--foreground));
+  --color-primary-light: color-mix(in oklab, var(--brand-accent) 18%, var(--popover));
+  --color-primary-light-darker: color-mix(in oklab, var(--brand-accent) 26%, var(--popover));
+  --color-brand-hover: var(--color-primary-darker);
+  --color-brand-active: var(--color-primary-darkest);
+  --color-surface-primary-container: color-mix(in oklab, var(--brand-accent) 20%, var(--popover));
+  --color-on-primary-container: var(--foreground);
+  --focus-highlight-color: color-mix(in oklab, var(--brand-accent) 45%, transparent);
+  --color-logo-icon: var(--brand-accent);
+
+  font-family: var(--font-sans);
+}
+
+/* The canvas itself is transparent (see displayBackground); our surface shows through. */
+.vw-whiteboard .excalidraw .excalidraw__canvas {
+  background: transparent;
+}
+
+/* Links that would leave the app: the help dialog's documentation/blog/GitHub header,
+   and the library sidebar (whose "browse libraries" opens the web). */
+.excalidraw .HelpDialog__header,
+.vw-whiteboard .excalidraw .default-sidebar-trigger,
+.vw-whiteboard .excalidraw [data-testid="toolbar-embeddable"] {
+  display: none !important;
+}
+
+/* App-wide base styles that should not reach into the canvas UI. */
+.vw-whiteboard .excalidraw button {
+  font-family: inherit;
+}
+
+.vw-whiteboard-export.h-9 {
+  border-radius: var(--border-radius-lg, 0.5rem);
+  box-shadow: var(--shadow-island);
+}

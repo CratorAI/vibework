@@ -1,0 +1,22 @@
+import { afterEach, expect, it, vi } from 'vitest';
+import { homeFieldScheduler } from '../homeFieldScheduler';
+afterEach(() => { vi.useRealTimers(); vi.unstubAllGlobals(); });
+it('queues only one draw frame per interval and cancels both queues on pause', () => {
+  vi.useFakeTimers();
+  vi.stubGlobal('window', globalThis);
+  const frames = new Map<number, FrameRequestCallback>(); let id = 0;
+  vi.stubGlobal('requestAnimationFrame', (fn: FrameRequestCallback) => { frames.set(++id, fn); return id; });
+  vi.stubGlobal('cancelAnimationFrame', (key: number) => frames.delete(key));
+  let active = true; const draw = vi.fn();
+  const scheduler = homeFieldScheduler(draw, () => active);
+  const frame = () => { const [key, fn] = [...frames][0]; frames.delete(key); fn(0); };
+  scheduler.sync(); expect(frames.size).toBe(1);
+  frame(); expect(draw).toHaveBeenCalledTimes(1);
+  vi.advanceTimersByTime(69); expect(frames.size).toBe(0);
+  vi.advanceTimersByTime(1); expect(frames.size).toBe(1);
+  active = false; scheduler.sync(); expect(frames.size).toBe(0);
+  vi.advanceTimersByTime(1000); expect(draw).toHaveBeenCalledTimes(1);
+  active = true; scheduler.sync(); frame(); expect(draw).toHaveBeenCalledTimes(2);
+  scheduler.stop(); vi.advanceTimersByTime(1000);
+  expect(frames.size).toBe(0); expect(vi.getTimerCount()).toBe(0);
+});

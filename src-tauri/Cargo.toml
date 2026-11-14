@@ -1,0 +1,113 @@
+[package]
+name = "Vibework"
+version = "1.0.0"
+description = "Desktop agent workspace for open models"
+authors = ["Crator"]
+license = "MIT"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+# This controls the process/executable name (what you see in the Dock when running `tauri dev`).
+name = "Vibework"
+path = "src/main.rs"
+
+[lib]
+# The `_lib` suffix may seem redundant but it is necessary
+# to make the lib name unique and wouldn't conflict with the bin name.
+# This seems to be only an issue on Windows, see https://github.com/rust-lang/cargo/issues/8519
+name = "vibe_work_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[features]
+# Dev-only: keep the debug automation bridge and the VIBEWORK_DEV_OPENROUTER_KEY
+# override in an optimised release build, to drive a packaged app in tests
+# (scripts/e2e/README.md). Never enabled by default; never ship a build made
+# with it.
+dev-release-probe = []
+
+[dev-dependencies]
+tempfile = "3"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri-plugin-updater = "2"
+semver = "1"
+tauri = { version = "2", features = ["macos-private-api"] }
+tauri-plugin-opener = "2"
+tauri-plugin-process = "2"
+tauri-plugin-os = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+# Checking a runtime the app downloads on first use (already in the tree)
+sha2 = "0.10"
+
+# HTTP Client
+reqwest = { version = "0.12", features = ["json", "rustls-tls", "stream"], default-features = false }
+
+# Async runtime
+tokio = { version = "1", features = ["sync", "time", "rt", "net", "process", "io-util", "macros", "signal"] }
+
+# Utilities
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+tracing-appender = "0.2"
+once_cell = "1"
+async-trait = "0.1"
+uuid = { version = "1.0", features = ["v4"] }
+anyhow = "1.0"
+futures = "0.3"
+# Loopback endpoint for the OpenCode engine (OpenRouter proxy + app MCP tools)
+hyper = { version = "1", features = ["server", "http1"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+http-body-util = "0.1"
+bytes = "1"
+dirs = "5"
+walkdir = "2"
+
+# Web tools (WebFetch HTML-to-markdown) and skills (SKILL.md frontmatter)
+htmd = "0.5"
+yaml-rust2 = "0.10"
+url = "2"
+
+# Artifacts panel (file watching, mime sniffing, URL decoding; base64 is listed below)
+notify = "8"
+infer = "0.19"
+percent-encoding = "2"
+
+tauri-plugin-deep-link = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-single-instance = "2"
+
+# Workspace panel: integrated terminal (PTY) and embedded browser (raw wry child webview, no Tauri IPC)
+portable-pty = "0.9"
+base64 = "0.22"
+# Attachment previews (downscaled thumbnails of images the user attached)
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp"] }
+# Artifacts page: first rows of an .xlsx for its thumbnail (both already in the tree)
+flate2 = "1"
+quick-xml = "0.38"
+wry = { version = "0.53", default-features = false, features = ["os-webview"] }
+# Search window: full-text index of the tasks' message text (SQLite FTS5, bundled)
+rusqlite = { version = "0.40", features = ["bundled"] }
+libc = "0.2"
+
+[target."cfg(target_os = \"macos\")".dependencies]
+keyring = { version = "3", features = ["apple-native"] }  # macOS Keychain
+objc2 = "0.5"
+objc2_new = { package = "objc2", version = "0.6" }
+appkit_new = { package = "objc2-app-kit", version = "0.3", features = ["NSImage", "NSBitmapImageRep"] }
+foundation_new = { package = "objc2-foundation", version = "0.3" }
+block2 = "0.6"
+objc2-app-kit = { version = "0.2", features = ["NSColor"] }
+
+[target."cfg(target_os = \"windows\")".dependencies]
+keyring = { version = "3", features = ["windows-native"] }  # Windows Credential Manager
+
+[target."cfg(target_os = \"macos\")".dependencies.core-foundation]
+version = "0.10"

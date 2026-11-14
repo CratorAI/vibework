@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import net from 'node:net';
+import {evaluate,request,collectErrors,errors,capture} from './client.mjs';
+assert.equal((await request('state')).mainWindow,true);
+assert.deepEqual(await evaluate('return await Promise.resolve({accent:"café",unicode:"你好 ☕"});'),{accent:'café',unicode:'你好 ☕'});
+assert.equal(await evaluate('return '+JSON.stringify('line\n}')), 'line\n}');
+await assert.rejects(evaluate('throw new Error("bridge-test-error")'),/bridge-test-error/);
+const {port}=JSON.parse(fs.readFileSync(process.env.VIBEWORK_BRIDGE_FILE||`${os.homedir()}/Library/Application Support/com.vibeworkapp.vibework/dev-bridge.json`));
+const unauthorized=await new Promise((resolve,reject)=>{const socket=net.connect(port,'127.0.0.1',()=>socket.write(JSON.stringify({op:'eval',token:'wrong',code:'return 42'})+'\n'));let buffer='';socket.on('data',data=>{buffer+=data;if(buffer.includes('\n')){resolve(JSON.parse(buffer));socket.end();}});socket.on('error',reject);});
+assert.equal(unauthorized.error,'Unauthorized');
+await collectErrors();
+console.log(JSON.stringify({bridge:'PASS',errors:await errors(),state:await request('state')}));
+console.log(capture('bridge-smoke'));

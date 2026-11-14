@@ -1,0 +1,56 @@
+[
+  {
+    "method": "thread/tokenUsage/updated",
+    "params": {
+      "threadId": "task-session",
+      "turnId": "turn-1",
+      "tokenUsage": {
+        "total": {
+          "totalTokens": 27536,
+          "inputTokens": 27443,
+          "cachedInputTokens": 13440,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 93,
+          "reasoningOutputTokens": 45
+        },
+        "last": {
+          "totalTokens": 27536,
+          "inputTokens": 27443,
+          "cachedInputTokens": 13440,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 93,
+          "reasoningOutputTokens": 45
+        },
+        "modelContextWindow": 475000
+      }
+    },
+    "emittedAtMs": 1794565754635
+  },
+  {
+    "method": "thread/tokenUsage/updated",
+    "params": {
+      "threadId": "task-session",
+      "turnId": "turn-1",
+      "tokenUsage": {
+        "total": {
+          "totalTokens": 55153,
+          "inputTokens": 55041,
+          "cachedInputTokens": 40832,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 112,
+          "reasoningOutputTokens": 45
+        },
+        "last": {
+          "totalTokens": 27617,
+          "inputTokens": 27598,
+          "cachedInputTokens": 27392,
+          "cacheWriteInputTokens": 0,
+          "outputTokens": 19,
+          "reasoningOutputTokens": 0
+        },
+        "modelContextWindow": 475000
+      }
+    },
+    "emittedAtMs": 1794565758429
+  }
+]

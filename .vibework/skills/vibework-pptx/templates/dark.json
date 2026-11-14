@@ -1,0 +1,11 @@
+{
+  "name": "dark",
+  "titleFont": "Arial",
+  "bodyFont": "Calibri",
+  "titleSize": 36,
+  "bodySize": 18,
+  "titleColor": "FFFFFF",
+  "bodyColor": "E0E0E0",
+  "backgroundColor": "1a1a2e",
+  "accentColor": "4da6ff"
+}

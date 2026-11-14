@@ -1,0 +1,277 @@
+/* Vibework's look for the README illustrations. Every value comes from the
+   app's src/index.css (light :root and .dark) and DESIGN.md: Mona Sans,
+   neutral greys, the brand orange only on the send button (light grey in
+   dark, as the app does), colour only on artifact type chips and folder
+   badges. The page behind each stage is transparent: GitHub's page is the
+   ground. */
+
+:root {
+  color-scheme: light;
+  --vw-bg: #fcfcfb;
+  --vw-fg: oklch(0.145 0 0);
+  --vw-card: #ffffff;
+  --vw-popover: #ffffff;
+  --vw-secondary: #f2f2f2;
+  --vw-fg2: #898781;
+  --vw-muted: oklch(0.97 0 0);
+  --vw-muted-fg: oklch(0.556 0 0);
+  --vw-faint: #a3a3a1;
+  --vw-user: oklch(0.961151 0 0);
+  --vw-border: oklch(0.922 0 0);
+  --vw-border-strong: #c7c7c7;
+  --vw-sidebar: #f4f4f2;
+  --vw-sidebar-row: #e9e9e7;
+  --vw-accent: #f9693c;
+  --vw-accent-fg: #fcfcfb;
+  --vw-warning: oklch(0.78 0.15 85);
+  --vw-warning-muted: oklch(0.97 0.04 90);
+  --vw-success: oklch(0.55 0.15 160);
+  --vw-info: oklch(0.55 0.18 255);
+  --vw-panel-stage: #f2f2f0;
+  --vw-lifted: 0 0 0 1px oklch(0 0 0 / 0.07), 0 1px 2px oklch(0 0 0 / 0.04), 0 6px 20px oklch(0 0 0 / 0.05);
+  --vw-popover-shadow: 0 0 0 1px oklch(0 0 0 / 0.08), 0 2px 4px oklch(0 0 0 / 0.04), 0 10px 28px oklch(0 0 0 / 0.08);
+  /* The window on GitHub's white page: a hairline and a short fall that
+     fits inside the stage's margin, so the shadow is never cut. */
+  --vw-window-shadow: 0 0 0 1px rgb(0 0 0 / 0.09), 0 1px 2px rgb(0 0 0 / 0.04), 0 12px 28px -10px rgb(0 0 0 / 0.16);
+  --vw-tile: #f6f6f4;
+
+  --file-sheet: oklch(0.62 0.15 155);
+  --file-doc: oklch(0.55 0.17 255);
+  --file-slides: oklch(0.66 0.17 50);
+  --file-design: oklch(0.56 0.2 305);
+  --file-web: oklch(0.6 0.15 235);
+
+  --folder-green: #0fa05c21; --folder-green-fg: #0b7d47;
+  --folder-violet: #7e4ed71f; --folder-violet-fg: #6a3fc0;
+  --folder-blue: #1570d11f; --folder-blue-fg: #145fb0;
+  --folder-amber: #e3ae282e; --folder-amber-fg: #8f6a0a;
+  --folder-orange: #e16c1021; --folder-orange-fg: #b5560c;
+  --folder-grey: #79818d24; --folder-grey-fg: #5b626c;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --vw-bg: #1c1c1c;
+  --vw-fg: #dedede;
+  --vw-card: #2c2c2c;
+  --vw-popover: #303030;
+  --vw-secondary: #343434;
+  --vw-fg2: #a8a8a8;
+  --vw-muted: #363636;
+  --vw-muted-fg: #a8a8a8;
+  --vw-faint: #969696;
+  --vw-user: #303030;
+  --vw-border: rgb(255 255 255 / 0.09);
+  --vw-border-strong: #575757;
+  --vw-sidebar: #292929;
+  --vw-sidebar-row: #363636;
+  --vw-accent: #dedede;
+  --vw-accent-fg: #242424;
+  --vw-warning: oklch(0.8 0.14 85);
+  --vw-warning-muted: oklch(0.3 0.05 85);
+  --vw-success: oklch(0.7 0.14 160);
+  --vw-info: oklch(0.7 0.14 255);
+  --vw-panel-stage: #232323;
+  --vw-lifted: 0 0 0 1px rgb(255 255 255 / 0.045), 0 2px 8px rgb(0 0 0 / 0.12);
+  --vw-popover-shadow: 0 0 0 1px oklch(1 0 0 / 0.1), 0 2px 4px oklch(0 0 0 / 0.3), 0 12px 32px oklch(0 0 0 / 0.4);
+  /* On GitHub's near-black page depth comes from the window's lighter
+     surface and a light hairline, not a shadow. */
+  --vw-window-shadow: 0 0 0 1px rgb(255 255 255 / 0.11), 0 16px 32px -12px rgb(0 0 0 / 0.6);
+  --vw-tile: #161616;
+
+  --file-sheet: oklch(0.68 0.14 155);
+  --file-doc: oklch(0.68 0.14 255);
+  --file-slides: oklch(0.72 0.15 55);
+  --file-design: oklch(0.73 0.17 305);
+  --file-web: oklch(0.7 0.13 235);
+
+  --folder-green: #3a9b7026; --folder-green-fg: #81c7a3;
+  --folder-violet: #9474ca26; --folder-violet-fg: #b7a2dc;
+  --folder-blue: #5b94c72b; --folder-blue-fg: #8db8df;
+  --folder-amber: #b99a402b; --folder-amber-fg: #d3b967;
+  --folder-orange: #bd805226; --folder-orange-fg: #d7a17b;
+  --folder-grey: #a3abb626; --folder-grey-fg: #b7bec8;
+}
+
+html, body {
+  margin: 0;
+  background: transparent;
+}
+
+.vw-root {
+  display: block;
+  width: 100vw;
+}
+
+/* Kit tokens, mapped onto the app's */
+.vw .ss-stage {
+  --ss-font: 'Mona Sans Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+  --ss-mono: 'Geist Mono Variable', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ss-canvas: var(--vw-sidebar);
+  --ss-surface: var(--vw-bg);
+  --ss-chrome: var(--vw-bg);
+  --ss-raised: var(--vw-card);
+  --ss-line: var(--vw-border);
+  --ss-text-strong: var(--vw-fg);
+  --ss-text: var(--vw-muted-fg);
+  --ss-text-faint: var(--vw-faint);
+  --ss-icon: var(--vw-muted-fg);
+  --ss-icon-faint: var(--vw-faint);
+  --ss-accent: var(--vw-accent);
+  --ss-radius-window: 12px;
+  --ss-ink-1: color-mix(in oklab, var(--vw-fg) 5%, transparent);
+  --ss-ink-2: color-mix(in oklab, var(--vw-fg) 8%, transparent);
+  --ss-ink-3: color-mix(in oklab, var(--vw-fg) 11%, transparent);
+  --ss-ink-4: color-mix(in oklab, var(--vw-fg) 16%, transparent);
+  --ss-ink-5: color-mix(in oklab, var(--vw-fg) 24%, transparent);
+  --ss-well: transparent;
+  overflow: hidden;
+  background: transparent;
+  font-family: var(--ss-font);
+  color: var(--vw-fg);
+  -webkit-font-smoothing: antialiased;
+  font-variant-numeric: tabular-nums;
+}
+
+.vw .vw-ico {
+  flex: none;
+  color: var(--vw-muted-fg);
+}
+
+.vw .vw-mono {
+  font-family: var(--ss-mono);
+}
+
+/* A folder badge: two letters in Geist Mono 600 on a tint of its hue */
+.vw .vw-badge {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  font-family: var(--ss-mono);
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.vw .vw-badge[data-size='20'] { width: 20px; height: 20px; border-radius: 5px; font-size: 9.5px; }
+.vw .vw-badge[data-hue='green'] { background: var(--folder-green); color: var(--folder-green-fg); }
+.vw .vw-badge[data-hue='violet'] { background: var(--folder-violet); color: var(--folder-violet-fg); }
+.vw .vw-badge[data-hue='blue'] { background: var(--folder-blue); color: var(--folder-blue-fg); }
+.vw .vw-badge[data-hue='amber'] { background: var(--folder-amber); color: var(--folder-amber-fg); }
+.vw .vw-badge[data-hue='orange'] { background: var(--folder-orange); color: var(--folder-orange-fg); }
+.vw .vw-badge[data-hue='grey'] { background: var(--folder-grey); color: var(--folder-grey-fg); }
+
+/* An artifact type chip: the type's hue at 12 to 14%, the icon in the hue */
+.vw .vw-type {
+  display: grid;
+  flex: none;
+  place-items: center;
+  border-radius: 10px;
+}
+.vw .vw-type[data-size='sm'] { border-radius: 5px; }
+.vw .vw-type[data-size='tile'] { border-radius: 8px; }
+.vw .vw-type[data-hue='slides'] { background: color-mix(in oklab, var(--file-slides) 14%, transparent); color: var(--file-slides); }
+.vw .vw-type[data-hue='doc'] { background: color-mix(in oklab, var(--file-doc) 12%, transparent); color: var(--file-doc); }
+.vw .vw-type[data-hue='sheet'] { background: color-mix(in oklab, var(--file-sheet) 14%, transparent); color: var(--file-sheet); }
+.vw .vw-type[data-hue='design'] { background: color-mix(in oklab, var(--file-design) 14%, transparent); color: var(--file-design); }
+.vw .vw-type[data-hue='web'] { background: color-mix(in oklab, var(--file-web) 14%, transparent); color: var(--file-web); }
+
+/* The model and mode controls under the message box */
+.vw .vw-pick {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 450;
+  color: var(--vw-fg);
+  white-space: nowrap;
+}
+.vw .vw-pick[data-quiet] { color: var(--vw-muted-fg); }
+.vw .vw-pick img { width: 15px; height: 15px; flex: none; }
+
+/* The send button: grey until there is text, then the brand accent */
+.vw .vw-send {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--vw-secondary);
+  color: var(--vw-faint);
+  transition: background-color 150ms ease, color 150ms ease, scale 150ms ease;
+}
+.vw .vw-send[data-on] {
+  background: var(--vw-accent);
+  color: var(--vw-accent-fg);
+}
+.vw .vw-send[data-pressed] { scale: 0.97; }
+
+/* Tool rows: a 16px icon in a fixed slot, one 14px sentence */
+.vw .vw-tool {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+  font-size: 14px;
+  color: var(--vw-muted-fg);
+  white-space: nowrap;
+}
+.vw .vw-tool .vw-ico { color: var(--vw-muted-fg); }
+
+/* The live step's label shimmers, the one decorative motion the app allows */
+.vw .vw-shimmer {
+  background: linear-gradient(90deg, var(--vw-muted-fg) 0%, var(--vw-muted-fg) 40%, var(--vw-fg) 50%, var(--vw-muted-fg) 60%, var(--vw-muted-fg) 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: vw-shimmer 1.6s linear infinite;
+}
+@keyframes vw-shimmer {
+  from { background-position: 100% 0; }
+  to { background-position: 0% 0; }
+}
+
+/* The user's message */
+.vw .vw-bubble {
+  max-width: 82%;
+  padding: 9px 16px;
+  border-radius: 18px;
+  background: var(--vw-user);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--vw-fg);
+}
+
+/* A file card: the type chip, the name, its type line, two quiet actions */
+.vw .vw-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 11px 14px 11px 12px;
+  border-radius: 14px;
+  background: var(--vw-card);
+  box-shadow: 0 0 0 1px var(--vw-border);
+}
+.vw .vw-card__text { display: grid; flex: 1; gap: 2px; min-width: 0; }
+.vw .vw-card__name { font-size: 14px; font-weight: 500; line-height: 1.35; color: var(--vw-fg); }
+.vw .vw-card__type { font-size: 13px; line-height: 1.35; color: var(--vw-muted-fg); }
+.vw .vw-card__acts { display: flex; gap: 12px; }
+
+.vw .vw-kbd {
+  display: inline-grid;
+  place-items: center;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: color-mix(in oklab, var(--vw-fg) 6%, transparent);
+  font-size: 11px;
+  color: var(--vw-faint);
+}

@@ -1,0 +1,22 @@
+#!/usr/bin/env bun
+import {evaluate,sleep,save} from './lib.mjs';
+const until=async(code)=>{for(let i=0;i<200;i++){const v=await evaluate(code);if(v)return v;await sleep(50)}throw Error(code)};
+const menu=async(selector)=>{console.log('open menu',selector);await evaluate(`const b=${selector};if(!b)throw Error('Missing menu trigger');b.dispatchEvent(new PointerEvent('pointerdown',{bubbles:true,button:0,pointerType:'mouse'}));return true`);await until(`return !!document.querySelector('[role=menu][data-state=open]')`)};
+const select=async(text)=>{console.log('select',text);await evaluate(`const item=[...document.querySelectorAll('[role=menuitem]')].find(x=>x.textContent.trim().startsWith(${JSON.stringify(text)}));if(!item)throw Error('Menu item missing');item.click();return true`);await until(`return !document.querySelector('[role=menu][data-state=open]')`)};
+const result={};
+console.log('navigate');await evaluate("location.hash='#/artifacts';return true");await until("return !!document.querySelector('[data-gallery-card]')");
+await menu(`document.querySelector('[aria-label="Filter artifact types"]')`);await select('Sheets');
+await until(`return document.querySelector('[aria-label="Filter artifact types"]').textContent.includes('Sheets')`);
+result.filter=await evaluate(`return {total:document.querySelector('[role=list][aria-label$=" artifacts"]').getAttribute('aria-label'),names:[...document.querySelectorAll('[data-gallery-card]')].map(b=>b.title.split('\\n')[0])}`);
+if(!result.filter.names.every(n=>/\.(csv|xlsx|xlsm)$/i.test(n)))throw Error('Unexpected Sheets item');
+await menu(`[...document.querySelectorAll('section[aria-label="Artifacts gallery"] button')].find(x=>x.textContent.trim()==='Recent')`);await select('Name');
+result.sort=await evaluate(`return [...document.querySelectorAll('[data-gallery-card]')].map(b=>b.title.split('\\n')[0])`);
+if(JSON.stringify(result.sort)!==JSON.stringify([...result.sort].sort((a,b)=>a.localeCompare(b))))throw Error('Name sort changed');
+await menu(`document.querySelector('button[aria-label^="Actions for "]')`);
+result.actions=await evaluate(`return [...document.querySelectorAll('[role=menuitem]')].map(x=>x.textContent.trim())`);
+await evaluate(`document.activeElement.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape',bubbles:true}));return true`);
+await until(`return !document.querySelector('[role=menu][data-state=open]')`);
+await menu(`document.querySelector('[aria-label="Filter artifact types"]')`);await select('All');
+await menu(`[...document.querySelectorAll('section[aria-label="Artifacts gallery"] button')].find(x=>x.textContent.trim()==='Name')`);await select('Recent');
+result.reset=await until(`return document.querySelector('[role=list][aria-label="345 artifacts"]')?.getAttribute('aria-label')`);
+save('gallery-controls',result);

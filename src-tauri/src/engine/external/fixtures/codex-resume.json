@@ -1,0 +1,210 @@
+[
+  {
+    "id": 2,
+    "result": {
+      "thread": {
+        "id": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309"
+      }
+    }
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "userMessage",
+        "id": "01a1d475-3f60-7d62-9ca8-67a077595986",
+        "clientId": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Without tools, say which file you wrote, in three words.",
+            "text_elements": []
+          }
+        ],
+        "startedAtMs": 1794565816161,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "startedAtMs": 1794565816161
+    },
+    "emittedAtMs": 1794565816161
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "userMessage",
+        "id": "01a1d475-3f60-7d62-9ca8-67a077595986",
+        "clientId": null,
+        "content": [
+          {
+            "type": "text",
+            "text": "Without tools, say which file you wrote, in three words.",
+            "text_elements": []
+          }
+        ],
+        "startedAtMs": 1794565816161,
+        "completedAtMs": 1794565816161
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "completedAtMs": 1794565816161
+    },
+    "emittedAtMs": 1794565816163
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "reasoning",
+        "id": "rs_064024b36c582c8b016af6e6ba01a487d0a270fda6a7a2fdfe",
+        "summary": [],
+        "content": [],
+        "startedAtMs": 1794565818056,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "startedAtMs": 1794565818056
+    },
+    "emittedAtMs": 1794565818056
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "reasoning",
+        "id": "rs_064024b36c582c8b016af6e6ba01a487d0a270fda6a7a2fdfe",
+        "summary": [],
+        "content": [],
+        "startedAtMs": 1794565818056,
+        "completedAtMs": 1794565818056
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "completedAtMs": 1794565818056
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/started",
+    "params": {
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+        "text": "",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794565818058,
+        "completedAtMs": null
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "startedAtMs": 1794565818058
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "itemId": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+      "delta": "I"
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "itemId": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+      "delta": " wrote"
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "itemId": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+      "delta": " hello"
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "itemId": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+      "delta": ".txt"
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/agentMessage/delta",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "itemId": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+      "delta": "."
+    },
+    "emittedAtMs": 1794565818058
+  },
+  {
+    "method": "item/completed",
+    "params": {
+      "item": {
+        "type": "agentMessage",
+        "id": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+        "text": "I wrote hello.txt.",
+        "phase": "final_answer",
+        "memoryCitation": null,
+        "delivery": null,
+        "questions": null,
+        "startedAtMs": 1794565818058,
+        "completedAtMs": 1794565818133
+      },
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+      "completedAtMs": 1794565818133
+    },
+    "emittedAtMs": 1794565818135
+  },
+  {
+    "method": "turn/completed",
+    "params": {
+      "threadId": "01a1d474-28b0-7c70-8e5a-0bfcc3a0c309",
+      "turn": {
+        "id": "01a1d475-33dc-7d43-b7ab-637a33255308",
+        "rootTurnId": "01a1d475-33dc-7d43-b7ab-637a33255308",
+        "items": [
+          {
+            "type": "agentMessage",
+            "id": "msg_064024b36c582c8b016af6e6ba019487d0abe5fa5b16f0f30a",
+            "text": "I wrote hello.txt.",
+            "phase": "final_answer",
+            "memoryCitation": null,
+            "delivery": null,
+            "questions": null,
+            "startedAtMs": 1794565818058,
+            "completedAtMs": 1794565818133
+          }
+        ],
+        "itemsView": "summary",
+        "status": "completed",
+        "error": null,
+        "startedAt": 1794565813,
+        "completedAt": 1794565818,
+        "durationMs": 4971
+      }
+    },
+    "emittedAtMs": 1794565818201
+  }
+]

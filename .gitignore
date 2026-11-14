@@ -1,0 +1,56 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+__pycache__
+*.py[co]
+
+# Leftovers from running a bundled skill locally (never bundled: see
+# scripts/prepare-skills.mjs, which also refuses to stage them)
+.vibework/skills/**/.venv/
+.vibework/skills/**/venv/
+.vibework/skills/**/.pytest_cache/
+.vibework/skills/**/.mypy_cache/
+.vibework/skills/**/.ruff_cache/
+.vibework/skills/**/.cache/
+.vibework/skills/**/package-lock.json
+.vibework/skills/**/bun.lock*
+
+*.env
+
+# Older checkouts kept bundled bun/uv here; uv is now downloaded on first use
+# (src-tauri/src/runtimes) and nothing here ships
+.vibework/scripts/
+.vibework/agent-browser/*
+
+# Release folders
+releases_macos
+releases_windows
+releases
+# Rust build output
+target
+# Skills staged for the bundle by scripts/prepare-skills.mjs
+src-tauri/bundle-resources
+
+# Downloaded, hash-verified OpenCode sidecars
+src-tauri/binaries/opencode-*
